@@ -1,0 +1,127 @@
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header {
+    background: var(--white);
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.header_container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+
+    span {
+        cursor: pointer;
+        font-size: 36px;
+        padding: 5px 10px;
+        background: -webkit-linear-gradient(-45deg, var(--lightBlue), var(--darkBlue));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-radius: 5px;
+    }
+}
+
+._menu_normal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+._user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    ._name {
+        font-size: 16px;
+    }
+
+    ._dropMenu {
+        font-size: 20px;
+        margin: auto 5px;
+    }
+}
+
+._menu {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+._mode {
+    list-style: none;
+}
+
+._dark {
+    min-width: fit-content !important;
+}
+
+.menu_mb,
+.collapse_mb {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .header,
+    .header_container {
+        height: auto;
+        min-height: 80px;
+    }
+
+    .header_container {
+        flex-direction: column;
+    }
+
+    .header_logo {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header_menu {
+
+        ._menu_normal {
+            display: none;
+        }
+    }
+
+    .menu_mb,
+    .collapse_mb {
+        display: block;
+    }
+
+    .menu_mb {
+        font-size: 24px !important;
+    }
+
+    .collapse_mb {
+        width: 100%;
+    }
+
+    ._collapse_icon {
+        font-size: 24px !important;
+        color: var(--lightBlue) !important;
+    }
+}

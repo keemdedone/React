@@ -1,0 +1,138 @@
+.body {
+    min-height: calc(100vh - 80px); // 80px from header height 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+}
+
+.body_content {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+._calendar {
+    background: var(--white);
+    border-radius: 5px;
+
+    ._controls {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 10px;
+        padding: 15px 2rem;
+
+        ._control {
+            font-size: 24px;
+        }
+    }
+
+    ._title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        gap: 15px;
+
+        ._month_name {
+            font-size: 48px;
+        }
+
+        ._year_number {
+            font-size: 24px;
+        }
+    }
+}
+
+._calendar ._head,
+._calendar ._body {
+    display: grid;
+    grid-template-columns: repeat(7, calc(100% / 7));
+}
+
+._day {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ._icon {
+        scale: 1.2;
+        margin: auto 5px;
+    }
+}
+
+._head ._day {
+    height: 50px;
+}
+
+._body ._day {
+    height: 100px;
+}
+
+@media screen and (max-width:1024px) {
+    ._day {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ._body ._day {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    ._calendar {
+        padding: 10px;
+
+        ._title {
+            gap: 5px;
+            margin-bottom: 1rem;
+
+            ._month_name {
+                font-size: 32px;
+            }
+
+            ._year_number {
+                font-size: 16px;
+            }
+        }
+
+        ._controls {
+            padding: 20px 0;
+            column-gap: 5px;
+
+            ._control {
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    ._body ._day {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    ._day {
+        font-size: 12px;
+
+        ._icon {
+            display: none;
+        }
+    }
+
+    ._head ._day,
+    ._body ._day {
+        height: 40px;
+    }
+
+    ._calendar ._controls {
+        justify-content: center;
+    }
+}

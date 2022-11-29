@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --darkBlue: #2f80ed;
+  --lightBlue: #56ccf2;
+}
+
+.react-icon {
+  font-size: 24px !important;
+}
+
+body {
+  margin: 0;
+  user-select: none;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, var(--lightBlue), var(--darkBlue));
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: 'Varela Round', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

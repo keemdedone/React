@@ -1,0 +1,71 @@
+.sideBar {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* min-height: calc(90% - 100px); */
+    min-height: 400px;
+    border-radius: 10px !important;
+    background: var(--white);
+    z-index: 10;
+}
+
+.sideBar_menu {
+    position: relative;
+    width: 50px;
+    padding: 10px;
+    list-style: none;
+    gap: 15px;
+    overflow-x: hidden;
+    transition: width 0.35s;
+
+    &.open {
+        transition: width 0.35s;
+        width: 200px;
+
+        ._toggle ._toggle_txt {
+            display: flex;
+        }
+    }
+}
+
+._toggle {
+    height: 50px;
+    overflow: hidden;
+    border: none !important;
+    border-radius: 3px !important;
+    padding: 10px 0 !important;
+    color: var(--black) !important;
+
+    &.Mui-selected {
+        color: #fff !important;
+        background-color: var(--lightBlue) !important;
+    }
+
+    ._toggle_txt {
+        display: none;
+        margin: auto 10px;
+        font-size: 16px !important;
+    }
+
+}
+
+._sidebar_control {
+    position: absolute !important;
+    left: 15px;
+    right: 0;
+    bottom: 15px;
+
+    ._control_btn {
+        background: var(--lightBlue);
+        min-width: fit-content !important;
+        padding: 10px !important;
+        border-radius: 50% !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .sideBar {
+        display: none !important;
+    }
+}
